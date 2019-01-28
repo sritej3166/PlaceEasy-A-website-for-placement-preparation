@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>PlaceEasy-Chat</title>
+<link rel="PlaceEasy icon" href="photos\favicon.ico"/>
+<style>
+
+p.temp {
+  position: absolute;
+  top: 130px;
+  left:10px;
+  width: 1000px;
+  height: 100px;
+  color:#051d42;
+  font-size: 20px;
+}
+
+<style>
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  width:90%;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+
+div.chatbox{
+	
+	width:45%;
+  position:absolute;
+  left: 750px;
+  border: 3px solid #051d42;
+  top:200px;
+}
+
+
+.vertical-menu {
+  position:absolute;
+  width: 300px;
+  height: 150px;
+ left:30px;
+ top:190px;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+	
+}
+
+</style>
+</head>
+
+<body>
+<div class="marque">
+<marquee behavior="scroll" direction="left">
+<img src="//photos\chat.gif" alt="CHAT!CHAT!CHAT!" style="width:20%">
+</marquee>
+<p class="temp">Select the contact you want to chat with from the list below:</p>
+</div>
+<div class="vertical-menu">
+  <a href="#">Friend1</a>
+  <a href="#">Senior1</a>
+  <a href="#">Teacher1</a>
+  <a href="#">Placement Co ordinator</a>
+  <a href="#">friend2</a>
+  <a href="#">senior2</a>
+</div>
+
+<div class="chatbox">
+<div class="container">
+  <img src="photos\PlaceEasy icon.png" alt="Avatar" style="width:100%;">
+  <p>Hello sir. Can i know the number of rounds for Deloitte interview?</p>
+  <span class="time-right">11:00</span>
+</div>
+
+<div class="container darker">
+  <img src="photos\PlaceEasy icon.png" alt="Avatar" class="right" style="width:100%;">
+  <p>Hey! It's 5 rounds!</p>
+  <span class="time-left">11:01</span>
+</div>
+
+<div class="container">
+  <img src="photos\PlaceEasy icon.png" alt="Avatar" style="width:100%;">
+  <p>ok!What is the first round?</p>
+  <span class="time-right">11:02</span>
+</div>
+
+<div class="container darker">
+  <img src="photos\PlaceEasy icon.png" alt="Avatar" style="width:100%;">
+  <p>Its an aptitude test...</p>
+  <span class="time-left">11:05</span>
+</div>
+
+<div>
+<input type="text" id="message" name="message" placeholder="enter message.."><br>
+<input type="submit" value="Submit">
+</div>
+</div>
+</body>
+</html>

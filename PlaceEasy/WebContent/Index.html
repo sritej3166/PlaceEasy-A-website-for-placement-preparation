@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="ISO-8859-1">
+
+<title>PlaceEasy</title>
+<link rel="PlaceEasy icon" href="photos/favicon.ico"/>
+
+<script>
+function openNav() {
+	  document.getElementById("mySidenav").style.display = "block";
+	}
+
+	function closeNav() {
+	  document.getElementById("mySidenav").style.display = "none";
+	}
+</script>
+
+<style>
+.header {
+  padding: 30px;
+  background: #051d42;
+color:white;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+html, body {
+margin:0;
+padding:0;
+
+}
+
+h2 {
+  text-shadow: 0 0 3px silver;
+}
+
+h2.a
+{
+font-family:"Arial Black", Gadget, sans-serif;
+}
+
+.header-right {
+  float: right;
+ font-family:"Arial Black", Gadget, sans-serif;
+}
+
+.header a {
+  float: top;
+  color:white;
+  text-align: top;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+
+  border-radius: 4px;
+}
+
+div.search {
+    height: 200px;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+span.temp{
+ text-shadow: 1px 1px red;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #051d42;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #051d42;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 10px solid #051d42;
+  background: white;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.temp1 {
+  position: absolute;
+  top: 180px;
+  left:570px;
+  width: 500px;
+  height: 100px;
+  color:#051d42;
+  font-size: 25px;
+}
+
+span.company{
+color: #051d42;
+ position: absolute;
+  top: 380px;
+  left:20px;
+  width: 1000px;
+  height: 100px;
+  color:#051d42;
+  font-size: 20px;
+}
+
+hr.line1{
+  color: #051d42;
+  position: absolute;
+  top: 350px;
+  width: 1515px;
+  color:#051d42;
+  height:3px;
+}
+
+hr.line2{
+  color: #051d42;
+  position: absolute;
+  top:720px;
+  width: 1515px;
+  color:#051d42;
+  height:1px;
+}
+div.row{
+ position: absolute;
+  top: 430px;
+}
+
+.column {
+  float:left;
+  padding: 30px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.sidenav {
+  display: none;
+  height: 42.1%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.chatimg{
+
+top:450px;
+}
+</style>
+</head>
+
+<body>
+<div class="header">
+  <img src="photos\PlaceEasy icon.png" width="75" height="75" alt="PlaceEasy" align=left>
+  <h2 class="a">PlaceEasy</h2>
+  <div class="header-right">
+    <a href="Contact.html">Contact</a>
+    <a href="About.html">About</a>
+    <a href="Login.html">Sign Out</a>
+  </div>
+</div>
+
+<div class="temp1"><span>Which company do u want to search for?</span></div>
+<div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="Hit the button to submit...">
+      <button type="submit" class="searchButton">
+        <img class="fa fa-search"></img>
+     </button>
+   </div>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="Chat.html">Chat</a>
+  <a href="http://www.vce.ac.in/Placements/Placements_Summary.cshtml">Placement Summary</a>
+  <a href="http://www.vce.ac.in/">Visit College Website</a>
+  <a href="#">FAQs</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; More</span>
+<a  href="Chat.html"><img src="photos\chat.gif" style="position:absolute; TOP:210px;right:20px;width:100px;height:70px;"></a>
+<br>
+<br>
+<span class="company">Here are some of the top companies that visited:<br>(Click icons to know more!)</span>
+<hr class="line1">
+
+<div class="row">
+  <div class="column">
+    <a href="Oracle.html"><img src="photos\oracle.png" alt="Oracle" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="Oracle.html"><img src="photos\microsoft.png" alt="Microsoft" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="Oracle.html"><img src="photos\servicenow.jpg" alt="Service Now" style="width:100%"></a>
+  </div>
+  <div class="column">
+   <a href="Oracle.html"> <img src="photos\adobe.png" alt="Adobe" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="Oracle.html"><img src="photos\pega.jpg" alt="Pega" style="width:115%"></a>
+  </div>
+</div>
+<hr class="line2">
+
+
+
+</body>
+</html>

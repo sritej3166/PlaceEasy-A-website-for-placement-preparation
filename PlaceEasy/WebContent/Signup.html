@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SignUp!</title>
+<link rel="PlaceEasy icon" href="photos\favicon.ico"/>
+
+<script>
+function pwdtest(){
+	var re=/[a-zA-z0-9]{6,20}/;
+	if(re.test(document.getElementById("pwd").value))
+    {
+		var r=/1602-(15|16|17|18)-73(3|4|5|6|7|0|1|2)-[0-9]{3}/;
+		if(!r.test(document.getElementById("uname").value))
+		{
+			t=document.getElementById("err");
+			t.innerHTML="Username Invalid";
+			t.style.color="red";
+			return false;
+		}
+		else
+	    {
+			return true;
+	    }
+    }
+	else
+		{
+		t=document.getElementById("err");
+		t.innerHTML="Password Length should be minimum 6 and maximum 20";
+		t.style.color="red";
+		return false;
+		}	
+}
+
+function checkname(){
+	var re=/1602-(15|16|17|18)-73(3|4|5|6|7|0|1|2)-[0-9]{3}/;
+	if(!re.test(document.getElementById("uname").value))
+	{
+		t=document.getElementById("err");
+		t.innerHTML="Username Invalid";
+		t.style.color="red";
+		
+	}
+}
+</script>
+
+</head>
+
+<body  background="photos\background1.jpg">
+<h1 align=center style="color:red"> Sign up to PlaceEasy!</h1>
+<form align=center onsubmit="return pwdtest()" method="post" action="Login.html">
+<b>Enter Username: </b><input type="text" id="uname" name="username" onblur="checkname()"><br>
+<p>Example:1602-16-733-050</p><br>
+<strong>Enter Password: </strong><input type="password" id="pwd" name="password"><br>
+<b id="err">  </b><br>
+<input type="submit" value="Submit">
+<input type="Reset" name="reset" value="Reset"><br><br>
+</form>
+</body>
+</html>
